@@ -5,6 +5,8 @@ RUN apk update \
   && apk add --no-cache \
     git \
     php82 \
+    php82-bcmath \
+    php82-calendar \
     php82-ctype \
     php82-curl \
     php82-dom \
