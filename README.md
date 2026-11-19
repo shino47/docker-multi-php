@@ -16,11 +16,11 @@ Now, in your `.bash_aliases` or `.zsh_aliases` add:
 
 ```shell
 _php74 () {
-  docker run -it --rm -v "$PWD":/opt/yeyo -w /opt/yeyo localphp:74 php "$@"
+  docker run -it --rm -u "$(id -u):$(id -g)" -v "$PWD":/opt/yeyo -w /opt/yeyo localphp:74 php "$@"
 }
 
 _composer_php74 () {
-  docker run -it --rm -v "$PWD":/opt/yeyo -w /opt/yeyo localphp:74 composer "$@"
+  docker run -it --rm -u "$(id -u):$(id -g)" -v "$PWD":/opt/yeyo -w /opt/yeyo localphp:74 composer "$@"
 }
 ```
 
